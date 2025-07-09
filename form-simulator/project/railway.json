@@ -1,0 +1,8 @@
+{
+  "build": {
+    "env": "python",
+    "buildCommand": "pip install -r ../requirements.txt",
+    "startCommand": "gunicorn project.wsgi:application"
+  },
+  "root": "project"
+}
