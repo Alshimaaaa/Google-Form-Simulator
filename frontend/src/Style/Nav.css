@@ -1,0 +1,40 @@
+
+.title {
+    font-family:'Times New Roman', Times, serif;
+    color: rgb(34, 32, 32);
+    font-size: 35px;
+    margin-right: 950px;
+    pointer-events: none
+}
+.nav-list{
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+}
+.nav-list li a{ 
+
+    font-size: 22px;
+    color: rgb(34, 32, 32);
+    margin: 14px;
+}
+
+.nav-links {
+    display:flex;
+    align-items: center;
+}
+.nav {
+    position: fixed;
+    padding-top: 100px;
+    background-color: #e9edf5a6;
+    backdrop-filter: blur(15px);
+
+    display: flex;
+    align-items: center;
+    padding: 7px;
+    top: 0;
+    width: 100%;
+    border-radius:7px;
+    border-style: none;
+    justify-content: space-between;
+
+}

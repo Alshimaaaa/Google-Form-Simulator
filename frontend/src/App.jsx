@@ -1,17 +1,19 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import SignUp from './pages/SignUp';
-import Login from './pages/Login';
-import Home from './pages/Home';
-import CreateForm from './pages/CreateForm';
-import ViewMyForms from './pages/ViewMyForms';
-import ViewForm from './pages/ViewForm';
-import ViewAllForms from './pages/ViewAllForms';
-import SubmitResponse from './pages/SubmitResponse';
-import ViewResponses from './pages/ViewResponses';
+import SignUp from './pages/Main/SignUp';
+import Login from './pages/Main/Login';
+import Home from './pages/Main/Home';
+import CreateForm from './pages/Form/CreateForm';
+import ViewMyForms from './pages/Form/ViewMyForms';
+import ViewForm from './pages/Form/ViewForm';
+import ViewAllForms from './pages/Form/ViewAllForms';
+import SubmitResponse from './pages/Response/SubmitResponse';
+import ViewResponses from './pages/Response/ViewResponses';
+import WelcomePage from './pages/Main/WelcomePage';
 function App() {
   return (
     <Router>
       <Routes>
+        <Route path="/" element={<WelcomePage />} />
         <Route path="/signUp" element={<SignUp />} />
         <Route path="/home" element={<Home />} />
         <Route path="/login" element={<Login />} /> 

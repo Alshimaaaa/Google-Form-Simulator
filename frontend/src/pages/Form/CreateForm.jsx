@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from "react-router-dom";
-
+import { PrivateNav } from "../Nav";
+import "../../Style/Form.css";
 function CreateForm() {
   const navigate = useNavigate();
   const [message, setMessage] = useState("");
@@ -62,8 +63,10 @@ function CreateForm() {
   };
 
   return (
-    <div>
-      <h2>Create a New Form</h2>
+    <>
+    <PrivateNav />
+    <div className="create-form">
+      <h2>Create New Form</h2>
       <form onSubmit={handleSubmit}>
         <input placeholder="Form title" value={name} onChange={(e) => setName(e.target.value)} required/>
 
@@ -95,6 +98,7 @@ function CreateForm() {
       <p>{message}</p>
 
     </div>
+    </>
   );
 }
 

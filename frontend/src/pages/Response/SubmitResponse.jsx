@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-
+import { PrivateNav } from "../Nav";
+import "../../Style/Response.css"
+import "../../Style/Form.css"
 function SubmitResponse() {
   const { id } = useParams(); 
   const navigate = useNavigate();
@@ -66,7 +68,9 @@ function SubmitResponse() {
   if (!form) return <p>Loading form...</p>;
 
   return (
-    <div>
+    <>
+    <PrivateNav />
+    <div className="view-form">
       <h2>{form.name}</h2>
 
       {form.questions.map((q) => (
@@ -98,6 +102,7 @@ function SubmitResponse() {
       <button onClick={handleSubmit}>Submit Response</button>
       <p>{message}</p>
     </div>
+    </>
   );
 }
 

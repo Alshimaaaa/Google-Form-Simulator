@@ -1,0 +1,91 @@
+.welcome-page {
+    padding: 50px;
+    padding-top: 70px;
+}
+.welcome-page h1 {
+    margin-bottom: 10px; 
+}
+.text {
+    margin-top: 0px;
+    margin-bottom: 60px;
+    padding-left:15px;
+}
+.welcome-page h3 {
+    margin-bottom: 60px;
+    margin-left: 13px;
+}
+.welcome-page h4 {
+    color: #e9edf5a6;
+    border-style: solid;
+    border-width: 1px;
+    border-radius:20px;
+    margin-left: 19px;
+    margin-right:555px;
+
+    padding: 25px;
+    padding-left: 60px;
+    padding-right: 150px;
+}
+.welcome-page button {
+    background-color: #e9edf5a6;
+    border: none;
+    border-radius: 20px;
+    margin-left:180px;
+    font-size: 16px;
+    color: rgb(34, 32, 32);
+}
+.welcome-page button:hover {
+    color: #e9edf5a6;
+    background-color: rgb(34, 32, 32);
+    transition: background-color 0.3s ease;
+}
+
+
+.signUp-page {
+    background-color: #e9edf5a6;
+    padding: 15px 30px;
+    margin-top: 100px;
+    border-radius: 20px;
+    max-width: 400px;
+    margin-left: 440px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+.signUp-page h2 {
+    font-size: 33px;
+    color: rgb(34, 32, 32);
+    margin-bottom: 30px;
+}
+
+.signUp-page input {
+    background-color: rgb(34, 32, 32);
+    width: 70%;
+    padding: 12px 15px;
+    margin: 12px 0;
+    border-radius: 20px;
+    border-style: solid;
+    font-size: 16px;
+}
+
+.signUp-page button {
+    background-color: rgb(34, 32, 32);
+    border-style: none;
+    border-radius: 20px;
+    padding: 10px 25px;
+    font-size: 16px;
+    color: #e9edf5a6;
+    margin-top: 15px;
+}
+
+.signUp-page button:hover {
+    color: rgb(34, 32, 32);
+    background-color: #e9edf5a6;
+}
+
+.signUp-page p {
+    color : rgb(34, 32, 32);
+}
+
+
+

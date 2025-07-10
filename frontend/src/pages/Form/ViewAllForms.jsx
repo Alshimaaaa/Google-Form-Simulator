@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import { useEffect} from 'react';
+import { PrivateNav } from "../Nav";
+import "../../Style/Form.css";
 function ViewAllForms() {
     useEffect(() => {
         fetchForm();
@@ -25,7 +27,9 @@ function ViewAllForms() {
     };
 
     return (
-        <div className="view-form">
+        <>
+        <PrivateNav />
+        <div className="create-form">
             <h2>All Forms</h2>
             {forms.length === 0 && (<p>No available forms</p>)}
             <ul>
@@ -38,6 +42,7 @@ function ViewAllForms() {
         ))}
       </ul>
     </div>
+        </>
   );
 }
 export default ViewAllForms;

@@ -2,7 +2,8 @@ import { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { useEffect} from 'react';
-
+import { PrivateNav } from "../Nav";
+import "../../Style/Form.css"
 function ViewForm() {
 
     const { id } = useParams();
@@ -23,6 +24,8 @@ function ViewForm() {
     if (!form) return <p>Loading form...</p>;
 
     return (
+        <>
+        <PrivateNav />
         <div className="view-form">
         <h2>{form.name}</h2>
         <ul className="form-questions">
@@ -51,6 +54,7 @@ function ViewForm() {
             
         </ul>
         </div>
+        </>
     );
 }
 

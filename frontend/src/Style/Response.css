@@ -1,0 +1,41 @@
+.response-container {
+    background-color: #e9edf5a6;
+    padding: 15px 30px;
+    margin-top: 100px;
+    border-radius: 20px;
+    max-width: 400px;
+    margin-left: 440px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+.response-container h2 {
+    font-size: 33px;
+    color: rgb(34, 32, 32);
+    margin-bottom: 30px;
+}
+
+
+.response-container p {
+   color : rgb(34, 32, 32);
+}
+
+.response-container ul {
+  list-style: none;
+  padding-left: 20px;
+  margin: 20px;
+}
+
+.response-container li {
+    list-style-type: none;
+    background-color: #e9edf5a6;
+    margin-bottom: 25px;
+    padding: 40px;
+    border-radius: 15px;
+}
+
+.response-container {
+  color: rgb(34, 32, 32);
+}
+
+

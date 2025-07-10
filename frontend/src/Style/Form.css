@@ -1,0 +1,120 @@
+.create-form {
+    background-color: #e9edf5a6;
+    padding: 15px 30px;
+    margin-top: 100px;
+    border-radius: 20px;
+    max-width: 400px;
+    margin-left: 440px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+.create-form h2 {
+    font-size: 33px;
+    color: rgb(34, 32, 32);
+    margin-bottom: 30px;
+}
+
+
+.create-form input {
+    background-color: rgb(34, 32, 32);
+    width: 70%;
+    padding: 12px 15px;
+    margin: 12px 0;
+    border-radius: 20px;
+    border-style: solid;
+    font-size: 16px;
+}
+
+
+
+.create-form button {
+    background-color: rgb(34, 32, 32);
+    border-style: none;
+    border-radius: 20px;
+    padding: 10px 25px;
+    font-size: 16px;
+    color: #e9edf5a6;
+    margin-top: 15px;
+}
+
+.create-form button:hover {
+    color: rgb(34, 32, 32);
+    background-color: #e9edf5a6;
+}
+
+.create-form p {
+  color : rgb(34, 32, 32);
+}
+
+.create-form ul li {
+    border-radius: 15px;
+    margin-left: 20px;
+    margin-right: 45px;
+    list-style-type: none;
+    background-color:rgb(34, 32, 32);;
+} 
+
+.create-form ul li p{
+    color: #e9edf5a6;
+}
+.create-form h3{
+    margin-top: 20px;
+    color: #e9edf5a6;
+    font-size: 27px;
+    font-family:'Times New Roman', Times, serif;
+}
+
+
+
+.view-form {
+    background-color: #e9edf5a6;
+    padding: 20px 60px;
+    margin-top: 130px;
+    border-radius: 20px;
+    margin-left: 500px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.view-form h2 {
+    text-align: center;
+    font-size: 33px;
+    color: rgb(34, 32, 32);
+    margin-bottom: 30px;
+}
+
+
+
+.form-questions li {
+    list-style-type: none;
+    background-color: #e9edf5a6;
+    margin-bottom: 25px;
+    padding: 40px;
+    border-radius: 15px;
+}
+
+.form-questions li strong {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: rgb(34, 32, 32);
+}
+
+.form-questions ul {
+  padding-left: 20px;
+  margin: 20px;
+}
+
+.form-questions ul li {
+  margin: 8px 0;
+  padding: 22px;
+}
+
+label {
+  font-size: 18px;
+  color: rgb(34, 32, 32);
+}
+
+.view-form strong{
+    color : rgb(34, 32, 32);
+}
+

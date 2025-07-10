@@ -1,10 +1,12 @@
 import {useState} from 'react';
 import { useNavigate } from "react-router-dom";
-
-function Login() {
+import { PublicNav } from "../Nav";
+import "../../Style/Main.css";
+function SignUp() {
     const navigate = useNavigate();
     const [form, setForm] = useState({
         username: '',
+        email: '',
         password: ''
     });
     const [message, setMessage] = useState("");
@@ -18,35 +20,39 @@ function Login() {
     const handleSubmit = async (e) => {
 
         e.preventDefault();
-        const response = await fetch('http://localhost:8000/login/', {
+        const response = await fetch('http://localhost:8000/signUp/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(form),
         });
         const data = await response.json();
         if (response.ok) {
-            setMessage("Login successful! Redirecting to home...");
-            localStorage.setItem("token", data.access);
+            setMessage("Signed up successfully! Redirecting to login...");
             setTimeout(() => {
-                navigate("/home");
+                navigate("/login");
             }, 2000);
         } 
         else {
-            setMessage("Login failed: " + (data.message || "Unknown error"));
+            setMessage("Sign up failed: " + (data.message || "Unknown error"));
         }
     };
 
     return (
-        <div className="login-container">
-            <h2>Login</h2>
+        <>
+        <PublicNav />
+        <div className="signUp-page">
+            <h2>Sign Up</h2>
             <form onSubmit={handleSubmit}>
                 <input type="text" name="username" placeholder="Username" value={form.username} onChange={handleChange} required />
+                <input type="email" name="email" placeholder="Email" value={form.email} onChange={handleChange} required />
                 <input type="password" name="password" placeholder="Password" value={form.password} onChange={handleChange} required />
-                <button type="submit">Login</button>
+                <button type="submit">Sign Up</button>
             </form>
             <p>{message}</p>
+            <p>Already have an account? <a href="/login"><button>Login</button></a></p>
         </div>
+        </>
     );
 }
 
-export default Login;
+export default SignUp

@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import { useEffect} from 'react';
-
+import { PrivateNav } from "../Nav";
+import "../../Style/Form.css";
 function ViewMyForms() {
     useEffect(() => {
     fetchForms();
@@ -20,7 +21,9 @@ function ViewMyForms() {
   };
 
   return (
-    <div className="view-my-forms">
+    <>
+    <PrivateNav />
+    <div className="create-form">
       <h2>Your Forms</h2>
       {forms.length === 0 && (
         <p>You haven't created any forms.</p>
@@ -29,13 +32,14 @@ function ViewMyForms() {
         {forms.map(form => (
           <li key={form.id}>
             <h3>{form.name}</h3>
-            <p>Questions: {form.questions.length}</p>
+            <p>No of questions: {form.questions.length}</p>
             <button onClick={() => navigate(`/viewForm/${form.id}`)}>View Form</button>
             <button onClick={() => navigate(`/viewResponses/${form.id}`)}>View Responses</button>
           </li>
         ))}
       </ul>
     </div>
+    </>
   );
 }
 

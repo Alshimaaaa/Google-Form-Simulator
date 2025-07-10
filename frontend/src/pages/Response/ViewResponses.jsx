@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-
+import { PrivateNav } from "../Nav";
+import "../../Style/Response.css";
 function ViewResponses() {
   const { formId } = useParams();
   const [responses, setResponses] = useState([]);
@@ -23,7 +24,9 @@ function ViewResponses() {
 
 
   return (
-    <div>
+    <>
+    <PrivateNav />
+    <div className="view-responses">
       <h2>Responses for Form: {form ? form.name : `#${formId}`}</h2>
       {responses.length === 0 && <p>No responses yet.</p>}
       {responses.map((response, i) => (
@@ -33,14 +36,17 @@ function ViewResponses() {
           <ul>
             {response.answers.map((ans, j) => (
               <li key={j}>
-                <strong>Q: </strong> {ans.questionText}<br />
-                <em>Answer:</em> {ans.answerText}
+                <strong>Question: </strong> {ans.questionText}<br/>
+                <strong>Question Type: </strong> {ans.questionType}<br/>
+                <strong>Answer:</strong> {ans.answerText}<br/>
+
               </li>
             ))}
           </ul>
         </div>
       ))}
     </div>
+    </>
   );
 }
 

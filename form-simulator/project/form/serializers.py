@@ -39,10 +39,11 @@ class FormSerializer(serializers.ModelSerializer):
 
 class AnswerSerializer(serializers.ModelSerializer):
     question = serializers.PrimaryKeyRelatedField(read_only=False, queryset=Question.objects.all())
+    questionType = serializers.CharField(source='question.type', read_only=True)
     questionText = serializers.CharField(source='question.question', read_only=True)
     class Meta:
         model = Answer
-        fields = [ 'answerText', 'question', 'questionText'] 
+        fields = [ 'answerText', 'question', 'questionText', 'questionType'] 
         read_only_fields = ['response']
 
 class ResponseSerializer(serializers.ModelSerializer):
